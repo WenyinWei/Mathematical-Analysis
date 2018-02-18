@@ -5,7 +5,7 @@ Affiliation   : Research institute
 Email         : weiwy16@mails.tsinghua.edu.cn
 
 Bibliography  : example.bib
-
+Package       : url
 [INCLUDE=book]
 [INCLUDE=webtoc]
 [INCLUDE=webanchors]
@@ -39,69 +39,78 @@ $\{x_n\}$ is bounded meaning $\exists M>0,\forall n,\left | x_{n} \right |\leqsl
 # Real Analysis
 # Complex Analysis
 
-Let's start with a sub section.
 
-## A short overview
+解析即可导。
 
-Figure [#fig-butterfly] in Section [#sec-intro] shows a monarch
-butterfly. Note that you can drag&drop images into the editor pane to
-include them in the document, and similarly with bibtex files, latex
-style files, etc.
+猜测：解析函数的要求是函数可以由$z$显式表示出来。
 
-~ Figure { #fig-butterfly; caption:"A Monarch butterfly (use the `.wide` class for wide figure)."; page-align:top}
-![butterfly]
+
+## Cauchy Theorem and Integration 
+
+**Cauchy Theorem**\/
+
+设l为区域$sigma$的边界围线，如果$f(z)$在区域$sigma$内解析，其在$\bar{\sigma}=\sigma+l$上连续，则$\oint_lf(z)dz=0$.
+
+在复通区域内，$\oint_lf(z)dz=\sum_{k=1}^n\oint_{l_k}f(z)dz$.
+
+下为复变函数分母n阶奇点积分式：
+~ Equation 
+    \oint_l \frac{dz}{(z-a)^n}=\left\{\begin{matrix}
+        2\pi i  &n=1 \\ 
+        0 &n\neq 1 
+        \end{matrix}\right.
 ~
 
-[butterfly]: images/butterfly.png "butterfly"  { width:4em }
 
-Our contributions are:
+**Cauchy Integration Formula**\/
+~ Equation 
+    f(a)=\frac{1}{2\pi i}\oint_l \frac{f(z)}{z-a} dz
+~
 
-* A figure of a _butterfly_;
-* Some **mathematics**;
-* And some source code;
-* And references to Tex books [@Knuth:TeX;@Lamport:LaTeX;@Goo93;@Fberg04] and others [@Grandstrand].
 
-And suddenly first one and then another began to sing as they played,
-deep-throated singing of the dwarves in the deep places of their ancient
-homes; and this is like a fragment of their song, if it can be like their
-song without their music. \[...\] As they sang the hobbit felt the love
-of beautiful things made by hands and by cunning and by magic moving
-through him, a fierce and jealous love, the desire of the hearts of
-dwarves. Then something Tookish woke up inside him, and he wished to go
-and see the great mountains, and hear the pine-trees and the waterfalls,
-and explore the caves, and wear a sword instead of a walking-stick. He
-looked out of the window. The stars were out in a dark sky above the
-trees. He thought of the jewels of the dwarves shining in dark caverns.
-Suddenly in the wood beyond The Water a flame leapt up -- probably
-somebody lighting a wood-fire -- and he thought of plundering dragons
-settling on his quiet Hill and kindling it all to flames. He shuddered;
-and very quickly he was plain Mr. Baggins of Bag-End, Under-Hill, again.
-He got up trembling.
+~ Equation 
+    2\pi i f(a)=\oint_l \frac{f(z)}{z-a} dz
+~
 
-And suddenly first one and then another began to sing as they played,
-deep-throated singing of the dwarves in the deep places of their ancient
-homes; and this is like a fragment of their song, if it can be like their
-song without their music. \[...\] As they sang the hobbit felt the love
-of beautiful things made by hands and by cunning and by magic moving
-through him, a fierce and jealous love, the desire of the hearts of
-dwarves. Then something Tookish woke up inside him, and he wished to go
-and see the great mountains, and hear the pine-trees and the waterfalls,
-and explore the caves, and wear a sword instead of a walking-stick. He
-looked out of the window. The stars were out in a dark sky above the
-trees. He thought of the jewels of the dwarves shining in dark caverns.
-Suddenly in the wood beyond The Water a flame leapt up -- probably
-somebody lighting a wood-fire -- and he thought of plundering dragons
-settling on his quiet Hill and kindling it all to flames. He shuddered;
-and very quickly he was plain Mr. Baggins of Bag-End, Under-Hill, again.
-He got up trembling.
+
+**Corollary**
+
+
+* 欧拉公式积分号内求导合法。
+
+   ~ Equation 
+        f^{(n)}(z)=\frac{n!}{2\pi i}\oint_l \frac{f(\xi)}{(\xi-z)^{n+1}}d\xi
+~
+
+   
+   
+
+* 柯西型积分
+   
+   即使$l$不是闭合曲线，上面的证明依然成立，因此可以判断，在（闭合或不闭合）的曲线$l$上连续的函数$\phi(\xi)$所构成的积分是不在曲线上的点的一个解析函数。
+   ~ Equation 
+        f^{(n)}(z)=\frac{n!}{2\pi i}\int_l \frac{\phi(\xi)}{(\xi-z)^{n+1}}d\xi
+~
+
+   由于这里的解析函数$f(z)$是由$\phi$导出的，故环积分可替换为线积分。
+   
+   利用柯西型积分，就可以推导出含参量积分的解析性。
+
+
+
+## Series of Complex Variable Function 
+
+复级数收敛等价于实部与虚部级数收敛
+
+## Analytic Continuation $Gamma$ Function 
+
+
+## The Residue Theory 
+
 
 
 
 [BIB]
-
-&pagebreak;
-
-# An appendix { @h1:"A" }
 
 
 ~ End MainPanel
