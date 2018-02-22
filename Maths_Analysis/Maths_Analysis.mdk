@@ -6,6 +6,8 @@ Email         : weiwy16@mails.tsinghua.edu.cn
 
 Bibliography  : example.bib
 Package       : url
+Package       :[curve]xypic
+
 [INCLUDE=book]
 [INCLUDE=webtoc]
 [INCLUDE=webanchors]
@@ -35,6 +37,22 @@ $\{x_n\}$ is bounded meaning $\exists M>0,\forall n,\left | x_{n} \right |\leqsl
 - Surjection, $f(X)=Y$
 - Bijection, or one to one.
 - Inverse function exists if and only if $f$ is a bijection.
+
+## Differential Calculus of Single Numerical Functions
+
+## Differential Calculus of Multiple Numerical Functions
+### Relation
+
+~ Equation  { #eq-cat; caption:"Category theory" }
+\xymatrix @-0.5em{
+U \ar@/_/[ddr]_y \ar@/^/[drr]^x \ar@{.>}[dr]|-{(x,y)} \\ & X \times_Z Y
+\ar[d]^q \ar[r]_p & X \ar[d]_f \\
+ & Y \ar[r]^g & Z }
+~
+### Composite Function
+
+
+
 
 # Real Analysis
 # Complex Analysis
@@ -78,7 +96,7 @@ $\{x_n\}$ is bounded meaning $\exists M>0,\forall n,\left | x_{n} \right |\leqsl
 
 * 欧拉公式积分号内求导合法。
 
-   ~ Equation 
+~ Equation 
         f^{(n)}(z)=\frac{n!}{2\pi i}\oint_l \frac{f(\xi)}{(\xi-z)^{n+1}}d\xi
 ~
 
@@ -88,8 +106,8 @@ $\{x_n\}$ is bounded meaning $\exists M>0,\forall n,\left | x_{n} \right |\leqsl
 * 柯西型积分
    
    即使$l$不是闭合曲线，上面的证明依然成立，因此可以判断，在（闭合或不闭合）的曲线$l$上连续的函数$\phi(\xi)$所构成的积分是不在曲线上的点的一个解析函数。
-   ~ Equation 
-        f^{(n)}(z)=\frac{n!}{2\pi i}\int_l \frac{\phi(\xi)}{(\xi-z)^{n+1}}d\xi
+~ Equation 
+ f^{(n)}(z)=\frac{n!}{2\pi i}\int_l \frac{\phi(\xi)}{(\xi-z)^{n+1}}d\xi
 ~
 
    由于这里的解析函数$f(z)$是由$\phi$导出的，故环积分可替换为线积分。
