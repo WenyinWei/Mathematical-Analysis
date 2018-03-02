@@ -7,7 +7,7 @@ Email         : weiwy16@mails.tsinghua.edu.cn
 Bibliography  : example.bib
 Package       : url
 Package       :[curve]xypic
-
+Aligned { replace:"~Math&nl;\begin{aligned}&nl;&source;&nl;\end{aligned}&nl;~" }
 [INCLUDE=book]
 [INCLUDE=webtoc]
 [INCLUDE=webanchors]
@@ -45,15 +45,38 @@ $\{x_n\}$ is bounded meaning $\exists M>0,\forall n,\left | x_{n} \right |\leqsl
 
 ~ Equation  { #eq-cat; caption:"Category theory" }
 \xymatrix @-0.5em{
-U \ar@/_/[ddr]_y \ar@/^/[drr]^x \ar@{.>}[dr]|-{(x,y)} \\ & X \times_Z Y
-\ar[d]^q \ar[r]_p & X \ar[d]_f \\
+U \ar@/_/[ddr]_y \ar@/^/[drr]^x \ar@{.>}[dr]|-{(x,y)} \\
+ & X \times_Z Y \ar[d]^q \ar[r]_p & X \ar[d]_f \\
  & Y \ar[r]^g & Z }
 ~
 ### Composite Function
 
 
+费马定理-》罗尔定理-》拉格朗日中值定理-》
+
+柯西中值定理
+~ Equation
+\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(\xi)}{g'(\xi)}
+~
+
+->洛必达
+-》Peano 余项，$o((x-x_0)^{n+1})$
+
+Lagrange 余项，$\frac{f^{n+1}(\xi)}{n+1}(x-x_0)$
+
+Integral 余项, $\int_{x_0}^x f^{(n+1)}(t) (x-t)^ndt/(n!)    $
 
 
+
+## Curvature
+Radius of curvature:$R=\frac{(1+y'_0^2)^{3/2}}{\left | y''_0 \right |}$
+
+## Trigonometric Function
+~ Aligned
+\sin(\alpha+\beta)&=\sin\alpha \cos\beta+\sin\beta\cos\alpha\\
+\cos(\alpha+\beta)&=\cos\alpha \cos\beta-\sin\alpha\sin\beta\\
+\tan(\alpha+\beta)&=\frac{\tan\alpha+\tan\beta}{1+\tan\alpha\tan\beta}
+~
 # Real Analysis
 # Complex Analysis
 
